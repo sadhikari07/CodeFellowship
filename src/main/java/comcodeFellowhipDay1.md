@@ -1,5 +1,3 @@
-#Lab 16: Spring Auth
-
 ## Overview
 For your remaining labs before the midterm project, you’ll create an app called CodeFellowship that allows people learning to code to connect with each other and support each other on their coding journeys.
 
@@ -31,11 +29,26 @@ The site should be reasonably styled. (This can be using CSS that you did not cr
 The site should contain integration testing. At a minimum, there should be tests to ensure basic functionality for the splash page and the sign up page.
 
 ## Testing
-There are no tests required for this lab.
+The following tests were performed to test the functionality of the app:
+
+  contextLoads: EAnsures that context loads
+  
+  testAppControllerIsAutowired: Ensures that AppController is operational
+  
+  testCodeControllerIsAutowired: Ensures that CodeFellowshipController is operational
 
 
 ## Instructions on running the app:
-
+  On the browser, enter localhost:8080, which will take to the home page.
+  From home page, user can login or sign up.
+  
+  If there is no accounts setup for user yet, they can fill out the information and sign up, whcih will redirect user to their profile page. User can access signup page by entering localhost:8080/signup also.
+  
+  If account is set up, user can login and go to their profile page, or to access the login page, user can enter localhost:8080/login.
+  
+  Once logged in, the user can view someone else's profile by entering localhost:8080/user/{name}
+  
+  The user has to enter localhost:8080/logout in order to logout.
 
 
 
