@@ -52,8 +52,16 @@ The following tests were performed to test the functionality of the app:
 
 
 
-[Link to Album.java](https://github.com/sadhikari07/songr/blob/master/src/main/java/com/sudadh/code401javaSongr/songrLab/SongrController.java)
+[Link to AppUser.java](https://github.com/sadhikari07/CodeFellowship/blob/master/src/main/java/com/suadhCodeFellowship/codeFellowship/AppUser/AppUser.java)
 
-[Link to AlbumController.java](https://github.com/sadhikari07/songr/blob/master/src/test/java/com/sudadh/code401javaSongr/songrLab/SongrControllerTest.java)
+[Link to App user controller.java](https://github.com/sadhikari07/CodeFellowship/blob/master/src/main/java/com/suadhCodeFellowship/codeFellowship/AppUser/AppUserController.java)
 
-[Link to album.html](https://github.com/sadhikari07/songr/blob/master/src/main/java/com/sudadh/code401javaSongr/songrLab/SongrController.java)
+[Link to CodeFellowshipController.java](https://github.com/sadhikari07/CodeFellowship/blob/master/src/main/java/com/suadhCodeFellowship/codeFellowship/CodeFellowshipController.java)
+
+[Link to HTML files](https://github.com/sadhikari07/CodeFellowship/tree/master/src/main/resources/templates)
+
+
+
+//This assignment was heavily referenced from Michelle's lecture: https://github.com/codefellows/seattle-java-401d4/tree/master/class-16/demo
+
+//Prison Mike: https://theoffice.fandom.com/wiki/Prison_Mike
