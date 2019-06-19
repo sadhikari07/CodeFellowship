@@ -1,0 +1,15 @@
+<header class="header" th:fragment="header" xmlns:th="http://www.springframework.org/schema/security">
+    <h1 align="center"><a href="/">Code Fellowship</a></h1>
+    <nav>
+        <a th:if="${loggedInName}" href="/user" th:text="${loggedInName}"></a>
+
+        <a th:if="${loggedInName}" href="/logout">Logout</a>
+
+        <a th:if="${loggedInName} == false" href="/login">Login</a>
+
+        <a th:if="${loggedInName} == false" href="/signup">Signup</a>
+
+        <a th:if="${loggedInName}" href="/post">Create a post</a>
+
+    </nav>
+</header>

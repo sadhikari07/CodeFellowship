@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sign up</title>
-</head>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sign up</title>
+        <link href="styles.css" rel="stylesheet">
+    </head>
 
-<body>
+    <body>
 
-<h1>Sign up</h1>
+        <div th:replace="fragments/header :: header">...</div>
 
-<form action="/signup" method="POST">
-    <p>User Name</p>
-    <input name="username"/>
+        <h1>Sign up</h1>
 
-    <p>Password</p>
-    <input type="password" name="password" />
+        <form action="/signup" method="POST">
+            <p>User Name</p>
+            <input name="username"/>
 
-    <p>First Name</p>
-    <input name="firstName" />
+            <p>Password</p>
+            <input type="password" name="password" />
 
-    <p>Last Name</p>
-    <input name="lastName" />
+            <p>First Name</p>
+            <input name="firstName" />
 
-    <p>Date of birth</p>
-    <input name="dateOfBirth" />
+            <p>Last Name</p>
+            <input name="lastName" />
 
-    <p>Bio</p>
-    <input name="bio" />
+            <p>Date of birth</p>
+            <input name="dateOfBirth" />
 
-    <p></p>
-    <input type="submit" />
+            <p>Bio</p>
+            <input name="bio" />
 
-</form>
+            <p></p>
+            <input type="submit" />
 
-</body>
+            <p></p>
+            <a href="/">Home</a>
+
+        </form>
+
+    </body>
 
 </html>
 

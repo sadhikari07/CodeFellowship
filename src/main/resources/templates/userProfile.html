@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="UTF-8">
-    <title>User Profile</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>User Profile</title>
+        <link href="/styles.css" rel="stylesheet">
+    </head>
 
-<body>
-<h1>User Profile</h1>
+    <body>
+        <div th:replace="fragments/header :: header">...</div>
 
-
-<h3>Welcome!!!</h3>
-
-<p></p>
-<p>Profile of: <span th:text="${userInfo.getFirstName()}"></span></p>
-
-<p></p>
-<p>First Name: <span th:text="${userInfo.getFirstName()}"></span></p>
-
-<p></p>
-<p>Last Name: <span th:text="${userInfo.getLastName()}"></span></p>
-
-<p></p>
-<p>Date of birth: <span th:text="${userInfo.getDateOfBirth()}"></span></p>
-
-<p></p>
-<p>Bio: <span th:text="${userInfo.getBio()}"></span></p>
-
-<img src="https://vignette.wikia.nocookie.net/theoffice/images/9/96/Prisonmike.png/revision/latest?cb=20100327171549" width="300px", height="300px">
+        <img class="profilePicture" src="https://vignette.wikia.nocookie.net/theoffice/images/9/96/Prisonmike.png/revision/latest?cb=20100327171549" width="300px", height="300px">
 
 
+        <h1>User Profile</h1>
 
-</body>
+
+        <h3>Welcome!!!</h3>
+
+        <p></p>
+        <p>Profile of: <span th:text="${userInfo.getFirstName()}"></span></p>
+
+        <p></p>
+        <p>First Name: <span th:text="${userInfo.getFirstName()}"></span></p>
+
+        <p></p>
+        <p>Last Name: <span th:text="${userInfo.getLastName()}"></span></p>
+
+        <p></p>
+        <p>Date of birth: <span th:text="${userInfo.getDateOfBirth()}"></span></p>
+
+        <p></p>
+        <p>Bio: <span th:text="${userInfo.getBio()}"></span></p>
+
+
+
+        <p></p>
+        <a href="/user">Your profile</a>
+
+        <p></p>
+        <a href="/logout">Logout</a>
+
+
+
+    </body>
 
 </html>

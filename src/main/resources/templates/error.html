@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Fellowship</title>
+    <link href="/styles.css" rel="stylesheet">
+    </head>
+
+<body>
+    <div th:replace="fragments/header :: header">...</div>
+
+    <h1>Error: No god no.... No.... No... Nooooooooooo....!!!</h1>
+
+    <div th:if="${user}">
+        Signed in as: <span th:text="user.getFirstName()"></span>
+    </div>
+
+
+    <table>
+        <tr>
+            <td>Path</td>
+            <td th:text="${path}"/>
+        </tr>
+        <tr>
+            <td>Error</td>
+            <td th:text="${error}"/>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td th:text="${status}"/>
+        </tr>
+        <tr>
+            <td>Message</td>
+            <td th:text="${message}"/>
+        </tr>
+    </table>
+
+    <img src="https://bayart.org/wp-content/uploads/2019/02/michael-scott-quotes-wayne-gretzky.jpg" width="300px", height="300px">
+
+
+</body>
+
+</html>
+
+
+<!--//Reference: https://github.com/codefellows/seattle-java-401d4/blob/master/class-16/demo/dinosaurs/src/main/resources/templates/error.html-->

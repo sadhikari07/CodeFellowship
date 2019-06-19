@@ -3,14 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>Code Fellowship</title>
+        <link href="styles.css" rel="stylesheet">
     </head>
 
     <body>
-        <h1>Code Fellowship</h1>
+
+    <div th:replace="fragments/header :: header">...</div>
+
+    <img class="profilePicture" src="https://vignette.wikia.nocookie.net/theoffice/images/9/96/Prisonmike.png/revision/latest?cb=20100327171549" width="300px", height="300px">
+
 
         <h3>Welcome, <span th:text="${user.getFirstName()}"></span></h3>
-        <p></p>
-        <p>Profile of: <span th:text="${user.getFirstName()}"></span></p>
 
         <p></p>
         <p>First Name: <span th:text="${user.getFirstName()}"></span></p>
@@ -24,8 +27,18 @@
         <p></p>
         <p>Bio: <span th:text="${user.getBio()}"></span></p>
     
-        <img src="https://vignette.wikia.nocookie.net/theoffice/images/9/96/Prisonmike.png/revision/latest?cb=20100327171549" width="300px", height="300px">
-    
+
+
+        <ul>
+        <li th:each="userPost : ${user.getUserPostList()}">
+            <a th:href="'/userPost/' + ${userPost.id}">
+                <span th:text="${userPost.post}"></span>
+                <span th:text="${userPost.createdAt}"></span>
+            </a>
+        </li>
+        </ul>
+
+
     </body>
 
 </html>

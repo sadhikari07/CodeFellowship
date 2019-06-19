@@ -1,0 +1,49 @@
+.profilePicture{
+height: 300px;
+width: 300px;
+float: right;
+}
+
+header{
+  border-style: double;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+nav a{
+color: blue;
+}
+
+h1{
+  font-size: 200%;
+  color: blue;
+
+}
+
+body{
+  background-image: url('https://media1.tenor.com/images/8f52f2020a8584a3bf030608fef35313/tenor.gif?itemid=6115180');
+  background-size: 100%;
+}
+
+
+p{
+  font-size: 30px;
+  color: black;
+  font-weight: bolder;
+}
+
+a{
+font-size: 200%;
+color: grey;
+}
+
+#postInput{
+width: 50%;
+height: 400%
+}
+
