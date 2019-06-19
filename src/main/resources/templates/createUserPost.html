@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
     <head>
         <meta charset="UTF-8">
-        <title>Code Fellowship Home</title>
+        <title>Create Post</title>
         <link href="styles.css" rel="stylesheet">
     </head>
 
     <body>
-
         <div th:replace="fragments/header :: header">...</div>
 
-        <p>Welcome to our home</p>
-        <p>We are a group of people who like to code and drink beer.</p>
-        <p></p>
+        <form action="/createUserPost" method="POST">
+            Post: <textarea id="postInput" type="text" name="post"></textarea>
+            <input type="submit" />
+        </form>
 
     </body>
-
 </html>

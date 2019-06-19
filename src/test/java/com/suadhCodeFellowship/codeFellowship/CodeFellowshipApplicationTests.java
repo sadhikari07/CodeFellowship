@@ -1,6 +1,9 @@
 package com.suadhCodeFellowship.codeFellowship;
 
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 import com.suadhCodeFellowship.codeFellowship.AppUser.AppUserController;
 import org.junit.Assert;
@@ -37,8 +40,6 @@ public class CodeFellowshipApplicationTests{
 	@Autowired
 	CodeFellowshipController codeFellowshipController;
 
-//	@Autowired
-//	MockMvc mockMvc;
 
 	@Test
 	public void contextLoads() {
@@ -54,5 +55,14 @@ public class CodeFellowshipApplicationTests{
 		assertNotNull(codeFellowshipController);
 	}
 
+	@Test
+	public void testRequestToRootGivesWelcome() throws Exception {
+		mockMvc.perform(get("/")).andExpect(content().string(containsString("Welcome to our home")));
+	}
+
+	@Test
+	public void testRequestToSignUpGivesSignUP() throws Exception {
+		mockMvc.perform(get("/signup")).andExpect(content().string(containsString("User Name")));
+	}
 
 }

@@ -2,18 +2,14 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="UTF-8">
-        <title>Code Fellowship Home</title>
-        <link href="styles.css" rel="stylesheet">
+        <title>One Post</title>
     </head>
-
     <body>
 
         <div th:replace="fragments/header :: header">...</div>
 
-        <p>Welcome to our home</p>
-        <p>We are a group of people who like to code and drink beer.</p>
-        <p></p>
-
+        <h1>Your post</h1>
+        <h3 th:text="${userPost.post}"></h3>
+        <h3 th:text="${userPost.createdAt}"></h3>
     </body>
-
 </html>

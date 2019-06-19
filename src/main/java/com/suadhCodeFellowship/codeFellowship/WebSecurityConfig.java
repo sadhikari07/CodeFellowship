@@ -36,7 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 // allow requests to all URLS that match the patterns even if not logged in
-                .antMatchers("/code", "/users", "/login", "/signup", "/").permitAll()
+                .antMatchers("/code", "/users", "/login", "/signup", "/", "/*.css").permitAll()
                 // anything else, you must be logged in
                 .anyRequest().authenticated()
                 .and()
