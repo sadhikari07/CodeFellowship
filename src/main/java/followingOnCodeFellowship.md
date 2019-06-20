@@ -27,7 +27,11 @@ The following tests were performed to test the functionality of the app:
 
 
 ## Instructions on running the app:
-  On the browser, enter localhost:8080, which will take to the home page.
+
+On the code: The user can run the tests from codeFellowshipApplicationTest.java to verify the functionality of the app.
+The user can run the app from CodeFellowshipAppication to start the server.
+ 
+ On the browser, enter localhost:8080, which will take to the home page.
   From home page, user can login or sign up.
   
   If there is no accounts setup for user yet, they can fill out the information and sign up, whcih will redirect user to their profile page. User can access signup page by entering localhost:8080/signup also.
@@ -35,6 +39,12 @@ The following tests were performed to test the functionality of the app:
   If account is set up, user can login and go to their profile page, or to access the login page, user can enter localhost:8080/login.
   
   Once logged in, the user can view someone else's profile by entering localhost:8080/user/{name}
+  
+  The user can see the list of the people they follow on their profile page.
+  
+  The user can click see poosible followees to see the possible list of people they can follow.
+  
+  The user can click feed to go to the recent feed page.
   
   The user has to enter localhost:8080/logout in order to logout.
 
