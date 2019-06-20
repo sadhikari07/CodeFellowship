@@ -4,13 +4,12 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Entity
 public class AppUser implements UserDetails {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
@@ -24,6 +23,19 @@ public class AppUser implements UserDetails {
 
     @OneToMany(mappedBy = "postWriter")
         List<UserPost> userPostList;
+
+    @ManyToMany(mappedBy = "followees")
+    public Set<AppUser> followers;
+
+
+
+    //Referenced from reading
+    @ManyToMany(cascade = {CascadeType.ALL})
+    @JoinTable(
+            name = "followers_and_followees_combined",
+            joinColumns = {@JoinColumn(name = "follower_id")},
+            inverseJoinColumns = {@JoinColumn(name = "followees_id")})
+    public Set<AppUser> followees;
 
 
 
@@ -73,6 +85,10 @@ public class AppUser implements UserDetails {
 
     public String getBio() {
         return this.bio;
+    }
+
+    public long getId() {
+        return id;
     }
 
     @Override

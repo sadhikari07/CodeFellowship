@@ -29,14 +29,29 @@
     
 
 
-        <ul>
+        <ol>
+            <p>Posts by you:</p>
         <li th:each="userPost : ${user.getUserPostList()}">
             <a th:href="'/userPost/' + ${userPost.id}">
                 <span th:text="${userPost.post}"></span>
-                <span th:text="${userPost.createdAt}"></span>
             </a>
         </li>
-        </ul>
+        </ol>
+
+
+    <ol>
+
+        <p>You are following <span th:text="${user.followees.size()}"></span> people:</p>
+
+        <li th:each="youFollow : ${user.followees}">
+            <a th:href="'/user/' + ${youFollow.getUsername()}" th:text="${youFollow.getFirstName()}"></a>
+            <ul th:if="${youFollow}">
+            <li th:each="userPost : ${youFollow.userPostList}">
+                <span th:text="${userPost.post}"></span>
+            </li>
+            </ul>
+        </li>
+    </ol>
 
 
     </body>
