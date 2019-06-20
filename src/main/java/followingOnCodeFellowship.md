@@ -40,13 +40,13 @@ The user can run the app from CodeFellowshipAppication to start the server.
   
   Once logged in, the user can view someone else's profile by entering localhost:8080/user/{name}
   
-  The user can see the list of the people they follow on their profile page.
+  The user can see the list of the people they follow and the feed on their profile page.
   
-  The user can click see poosible followees to see the possible list of people they can follow.
+  The user can type localhost:8080/user/allUsers to see poosible followees to see the possible list of people they can follow.
   
-  The user can click feed to go to the recent feed page.
+  The user can type localhost:8080/feed to go to the recent feed page.
   
-  The user has to enter localhost:8080/logout in order to logout.
+  The user can click logout order to logout.
 
 
 
