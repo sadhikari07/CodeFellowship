@@ -38,5 +38,4 @@ public class UserPost {
         this.createdAt = createdAt;
     }
 
-
 }

@@ -18,9 +18,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.security.Principal;
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Controller
 public class AppUserController {
@@ -61,8 +60,7 @@ public class AppUserController {
     @PostMapping(value = "/signup")
     public RedirectView signUpUsers(@RequestParam String username, String password, String firstName, String lastName, Date dateOfBirth, String bio) {
         AppUser newAppUser = new AppUser(username, passwordEncoder.encode(password), firstName, lastName, dateOfBirth, bio);
-
-        appUserRepository.save(newAppUser);
+         appUserRepository.save(newAppUser);
         Authentication authentication = new UsernamePasswordAuthenticationToken(newAppUser, null, new ArrayList<>());
         SecurityContextHolder.getContext().setAuthentication(authentication);
         return new RedirectView("/user");
@@ -124,6 +122,40 @@ public class AppUserController {
             throw new NotYourPostException("Nice try Toby, but you didn't write that post.");
         }
     }
+
+
+    @GetMapping("/user/allusers")
+    public String getAllUsers(Model m, Principal p) {
+        isUserLoggedIn(p, m);
+        AppUser loggedInUser = appUserRepository.findByUsername(p.getName());
+        List<AppUser> possibleFollowees = (List)appUserRepository.findAll();
+        possibleFollowees.removeAll(loggedInUser.followees);
+        m.addAttribute("userInfo", possibleFollowees);
+        return "possibleToFollow";
+    }
+
+
+
+
+
+    @PostMapping("/user/follow")
+        public RedirectView follow(long follow, Model m, Principal p){
+        isUserLoggedIn(p, m);
+        AppUser currentUser = appUserRepository.findByUsername(p.getName());
+        currentUser.followees.add(appUserRepository.findById(follow).get());
+        appUserRepository.save(currentUser);
+        return new RedirectView("/user");
+    }
+
+
+    @GetMapping("/feed")
+    public String getAllFeed(Model m, Principal p) {
+        isUserLoggedIn(p, m);
+        AppUser loggedInUser = appUserRepository.findByUsername(p.getName());
+        m.addAttribute("user", loggedInUser);
+        return "feed";
+    }
+
 
     //https://stackoverflow.com/questions/2066946/trigger-404-in-spring-mvc-controller
     @ResponseStatus(value = HttpStatus.FORBIDDEN)

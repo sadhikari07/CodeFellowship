@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Fellowship</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div th:replace="fragments/header :: header">...</div>
+
+
+<ul>
+    <li th:each="youFollow : ${user.followees}">
+        <ul th:if="${youFollow}">
+            <li th:each="userPost : ${youFollow.userPostList}">
+                <a th:href="'/user/' + ${youFollow.getUsername()}" th:text="${youFollow.getFirstName()}"></a>
+                <span th:text="${userPost.post}"></span>
+                <span th:text="${userPost.createdAt}"></span>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+</body>
+
+</html>

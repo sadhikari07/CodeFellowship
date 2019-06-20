@@ -1,6 +1,7 @@
 <header class="header" th:fragment="header" xmlns:th="http://www.springframework.org/schema/security">
     <h1 align="center"><a href="/">Code Fellowship</a></h1>
     <nav>
+
         <a th:if="${loggedInName}" href="/user" th:text="${loggedInName}"></a>
 
         <a th:if="${loggedInName}" href="/logout">Logout</a>
@@ -13,3 +14,5 @@
 
     </nav>
 </header>
+
+

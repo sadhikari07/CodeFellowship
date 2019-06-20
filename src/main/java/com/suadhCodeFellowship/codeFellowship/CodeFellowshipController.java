@@ -28,7 +28,7 @@ public class CodeFellowshipController {
          isUserLoggedIn(p, m);
          AppUser currentUser = appUserRepository.findByUsername(p.getName());
          m.addAttribute("user", currentUser);
-         System.out.println(currentUser.getUserPostList());
+
          return "code";
      }
 

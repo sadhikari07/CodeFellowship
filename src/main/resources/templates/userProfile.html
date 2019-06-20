@@ -9,6 +9,14 @@
     <body>
         <div th:replace="fragments/header :: header">...</div>
 
+        <form method="POST" th:action="follow">
+            <button name="follow"
+                        th:value="${userInfo.getId()}"
+                        th:text="Follow">
+            </button>
+        </form>
+
+
         <img class="profilePicture" src="https://vignette.wikia.nocookie.net/theoffice/images/9/96/Prisonmike.png/revision/latest?cb=20100327171549" width="300px", height="300px">
 
 
@@ -31,15 +39,6 @@
 
         <p></p>
         <p>Bio: <span th:text="${userInfo.getBio()}"></span></p>
-
-
-
-        <p></p>
-        <a href="/user">Your profile</a>
-
-        <p></p>
-        <a href="/logout">Logout</a>
-
 
 
     </body>

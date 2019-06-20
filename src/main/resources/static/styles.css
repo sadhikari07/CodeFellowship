@@ -15,7 +15,7 @@ nav{
     justify-content: space-between;
 }
 
-nav a{
+nav {
 color: blue;
 }
 
@@ -39,7 +39,7 @@ p{
 
 a{
 font-size: 200%;
-color: grey;
+color: black;
 }
 
 #postInput{
@@ -47,3 +47,6 @@ width: 50%;
 height: 400%
 }
 
+body a{
+color: black;
+}
