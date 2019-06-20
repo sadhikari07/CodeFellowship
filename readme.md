@@ -2,4 +2,4 @@
 
 ## [Link to code fellowship day2 Spring Auth readme](https://github.com/sadhikari07/CodeFellowship/blob/master/src/main/java/codeFellowhipDay2.md)
 
-## [Link to Following Users on CodeFellowship readme](https://github.com/sadhikari07/CodeFellowship/blob/master/src/main/java/codeFellowhipDay2.md)
+## [Link to Following Users on CodeFellowship readme](https://github.com/sadhikari07/CodeFellowship/blob/master/src/main/java/followingOnCodeFellowship.md)
