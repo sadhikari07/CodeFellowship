@@ -12,31 +12,35 @@
 
     <img class="profilePicture" src="https://vignette.wikia.nocookie.net/theoffice/images/9/96/Prisonmike.png/revision/latest?cb=20100327171549" width="300px", height="300px">
 
+    <div class="myInfo">
 
-        <h3>Welcome, <span th:text="${user.getFirstName()}"></span></h3>
-
-        <p></p>
-        <p>First Name: <span th:text="${user.getFirstName()}"></span></p>
+        <p>Welcome <span th:text=" ${user.getFirstName().toUpperCase()}"></span></p>
 
         <p></p>
-        <p>Last Name: <span th:text="${user.getLastName()}"></span></p>
+        <p>Name: <span th:text="${user.getFirstName().toUpperCase()} "></span> <span th:text=" ${user.getLastName().toUpperCase()}"></span></p>
+
+        <p></p>
+        <p></p>
 
         <p></p>
         <p>Date of birth: <span th:text="${user.getDateOfBirth()}"></span></p>
 
         <p></p>
         <p>Bio: <span th:text="${user.getBio()}"></span></p>
+
+    </div>
     
 
-
-        <ol>
-            <p>Posts by you:</p>
-        <li th:each="userPost : ${user.getUserPostList()}">
-            <a th:href="'/userPost/' + ${userPost.id}">
-                <span th:text="${userPost.post}"></span>
-            </a>
-        </li>
-        </ol>
+        <div class="postsByYou">
+            <ol>
+                <p>Posts by you:</p>
+            <li th:each="userPost : ${user.getUserPostList()}">
+                <a  th:href="'/userPost/' + ${userPost.id}">
+                    <span class="post" th:text="${userPost.post}"></span>
+                </a>
+            </li>
+            </ol>
+        </div>
 
 
     <ol>
@@ -44,10 +48,10 @@
         <p>You are following <span th:text="${user.followees.size()}"></span> people:</p>
 
         <li th:each="youFollow : ${user.followees}">
-            <a th:href="'/user/' + ${youFollow.getUsername()}" th:text="${youFollow.getFirstName()}"></a>
+            <a class="friendNameInProfile" th:href="'/user/' + ${youFollow.getUsername()}" th:text="${youFollow.getFirstName().toUpperCase()}"></a>
             <ul th:if="${youFollow}">
-            <li th:each="userPost : ${youFollow.userPostList}">
-                <span th:text="${userPost.post}"></span>
+            <li class="post" th:each="userPost : ${youFollow.userPostList}">
+                Post: <span th:text="${userPost.post}"></span>
             </li>
             </ul>
         </li>

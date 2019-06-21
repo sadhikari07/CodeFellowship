@@ -15,19 +15,15 @@ nav{
     justify-content: space-between;
 }
 
-nav {
-color: blue;
-}
-
 h1{
   font-size: 200%;
   color: blue;
-
 }
 
 body{
-  background-image: url('https://media1.tenor.com/images/8f52f2020a8584a3bf030608fef35313/tenor.gif?itemid=6115180');
-  background-size: 100%;
+  background-image: url('https://image.freepik.com/free-psd/abstract-background-design_1297-84.jpg');
+    background-repeat: no-repeat;
+   background-size: 100%;
 }
 
 
@@ -39,14 +35,75 @@ p{
 
 a{
 font-size: 200%;
-color: black;
+color: blue;
+text-decoration: none;
 }
 
-#postInput{
-width: 50%;
-height: 400%
-}
+
 
 body a{
+color: #1a86bd;
+text-decoration: none;
+}
+
+.myInfo{
+width: 40%;
+margin: 0 auto;
+align-items: center;
+}
+
+.friendNameInProfile{
 color: black;
 }
+
+.post{
+color: #0d2ee4;
+}
+
+
+
+//CSS Reference: https://envato.com/blog/css-snippets-responsive-menus/
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  position: relative;
+  text-align: left;
+}
+
+nav li {
+  float: left;
+}
+
+nav ul:after {
+  clear: both;
+}
+
+nav ul:before,
+nav ul:after {
+    content: " ";
+    display: table;
+}
+
+nav {
+  position: relative;
+  background: #2B2B2B;
+  background-image: -webkit-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  background-image: -moz-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  background-image: -o-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  background-image: linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #0E0E0E;
+  -webkit-box-shadow: 2px 2px 3px #888;
+  -moz-box-shadow: 2px 2px 3px #888;
+  box-shadow: 2px 2px 3px #888;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
