@@ -63,3 +63,5 @@ The user can run the app from CodeFellowshipAppication to start the server.
 //This assignment was heavily referenced from Michelle's lecture: https://github.com/codefellows/seattle-java-401d4/tree/master/class-16/demo
 
 //Prison Mike: https://theoffice.fandom.com/wiki/Prison_Mike
+
+//CSS reference:  https://envato.com/blog/css-snippets-responsive-menus/
