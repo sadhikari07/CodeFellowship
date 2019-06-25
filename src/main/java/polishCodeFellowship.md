@@ -4,6 +4,7 @@ Your actual feature task: deploy to AWS! Submit the URL of your deployed applica
 (Feel free to also polish look & feel of your app before you deploy.)
 
 [Deployed app](http://codefellowship-dev-cname.us-west-2.elasticbeanstalk.com)
+
 Link: http://codefellowship-dev-cname.us-west-2.elasticbeanstalk.com
 
 ## Testing
