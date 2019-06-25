@@ -4,4 +4,4 @@
 
 ## [Link to Following Users on CodeFellowship readme](https://github.com/sadhikari07/CodeFellowship/blob/master/src/main/java/followingOnCodeFellowship.md)
 
-## [Link polish up CodeFellowship readme](https://github.com/sadhikari07/CodeFellowship/blob/master/src/main/java/followingOnCodeFellowship.md)
+## [Link polish up CodeFellowship readme](https://github.com/sadhikari07/CodeFellowship/blob/master/src/main/java/polishCodeFellowship.md)
